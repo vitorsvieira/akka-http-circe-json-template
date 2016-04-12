@@ -26,9 +26,9 @@ lazy val buildSettings = Seq(
 )
 
 val akkaV  = "2.4.3"
-val circeV = "0.3.0"
+val circeV = "0.4.0"
 val scalaTestV  = "2.2.6"
-val akkaCirceV  = "1.5.3"
+val akkaCirceV  = "1.5.4"
 
 
 lazy val `template` = project
