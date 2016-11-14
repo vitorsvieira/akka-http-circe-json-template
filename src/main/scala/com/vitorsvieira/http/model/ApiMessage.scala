@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.notvitor.http.model
+package com.vitorsvieira.http.model
 
 import akka.actor.ActorSystem
 

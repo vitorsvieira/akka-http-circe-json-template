@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.github.notvitor.http.server
+package com.vitorsvieira.http.server
 
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.Http.{ IncomingConnection, ServerBinding }
 import akka.http.scaladsl.server.Route._
 import akka.stream.scaladsl.{ Sink, Source }
-import com.github.notvitor.http.config.ServerSettingsTemplate
-import com.github.notvitor.http.routes.AkkaHttpRoutesTemplate
+import com.vitorsvieira.http.config.ServerSettingsTemplate
+import com.vitorsvieira.http.routes.AkkaHttpRoutesTemplate
 
 import scala.concurrent.Future
 import scala.io.StdIn
@@ -45,7 +45,7 @@ object AkkaHttpServerTemplate extends App {
       )
       .run()
 
-  handler onFailure { case ex: Exception ⇒ log.error(ex, "Failed to bind to {}:{}", httpInterface, httpPort) }
+  handler.failed.foreach { case ex: Exception ⇒ log.error(ex, "Failed to bind to {}:{}", httpInterface, httpPort) }
 
   StdIn.readLine(s"\nPress RETURN to stop...")
 

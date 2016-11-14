@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-package com.github.notvitor.http.routes
+package com.vitorsvieira.http.routes
 
 import akka.http.scaladsl.coding.Gzip
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server._
-
 
 trait BaseRoute extends CorsSupport {
 
