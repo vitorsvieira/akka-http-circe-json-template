@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.github.notvitor.http.repository
+package com.vitorsvieira.http.repository
 
-import com.github.notvitor.http.model.ModelTemplate
+import com.vitorsvieira.http.model.ModelTemplate
 import scala.collection.immutable.IndexedSeq
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global

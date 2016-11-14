@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.github.notvitor.http.routes
+package com.vitorsvieira.http.routes
 
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
-import com.github.notvitor.http.config.ServerSettingsTemplate._
-import com.github.notvitor.http.model.{ ApiMessage, ApiStatusMessages, ModelTemplate }
-import com.github.notvitor.http.repository.RepositoryTemplate
+import com.vitorsvieira.http.config.ServerSettingsTemplate._
+import com.vitorsvieira.http.model.{ ApiMessage, ApiStatusMessages, ModelTemplate }
+import com.vitorsvieira.http.repository.RepositoryTemplate
 import de.heikoseeberger.akkahttpcirce.CirceSupport._
 import scala.concurrent.Future
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.notvitor.http.routes
+package com.vitorsvieira.http.routes
 
 import akka.http.scaladsl.marshalling.ToResponseMarshallable.apply
 import akka.http.scaladsl.model.HttpMethods._
@@ -26,8 +26,8 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.{ Directive0, Route }
 
 /**
-  * This trait is responsible to provide CORS headers to the endpoints
-  */
+ * This trait is responsible to provide CORS headers to the endpoints
+ */
 trait CorsSupport {
 
   private def addAccessControlHeaders: Directive0 = mapResponseHeaders { headers ⇒

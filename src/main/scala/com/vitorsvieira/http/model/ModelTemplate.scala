@@ -14,12 +14,6 @@
  * limitations under the License.
  */
 
-package com.github.notvitor.http.model
+package com.vitorsvieira.http.model
 
-final case class ModelTemplate(vString: String
-                               , vInt: Int
-                               , vLong: Long
-                               , vFloat: Float
-                               , vDouble: Double
-                               , vSeqInt: Seq[Int]
-                               , vListInt: List[Int])
+final case class ModelTemplate(vString: String, vInt: Int, vLong: Long, vFloat: Float, vDouble: Double, vSeqInt: Seq[Int], vListInt: List[Int])

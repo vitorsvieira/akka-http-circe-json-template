@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.github.notvitor.http.config
+package com.vitorsvieira.http.config
 
 import akka.actor.ActorSystem
-import akka.event.{ Logging, LoggingAdapter }
+import akka.event.{ LogSource, Logging }
 import akka.stream.ActorMaterializer
 import com.typesafe.config.{ Config, ConfigFactory }
 
@@ -32,8 +32,11 @@ trait ServerSettingsTemplate {
 
   implicit val actorSystem: ActorSystem = ActorSystem("akka-http-circe-json")
   implicit val materializer: ActorMaterializer = ActorMaterializer()
-  implicit val log: LoggingAdapter = Logging(actorSystem, getClass)
   implicit val executionContext: ExecutionContextExecutor = actorSystem.dispatcher
+  private implicit val logSource: LogSource[ServerSettingsTemplate] = (t: ServerSettingsTemplate) ⇒ t.getClass.getSimpleName
+  private def logger(implicit logSource: LogSource[_ <: ServerSettingsTemplate]) = Logging(actorSystem, this.getClass)
 
+  implicit val log = logger
 }
+
 object ServerSettingsTemplate extends ServerSettingsTemplate
