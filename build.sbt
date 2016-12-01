@@ -30,7 +30,7 @@ val akkaCors   = "0.1.10"
 val circeV     = "0.6.1"
 val scalaTestV = "3.0.1"
 val akkaCirceV = "1.11.0"
-val logbackV   = "1.1.3"
+val logbackV   = "1.1.7"
 
 
 lazy val `template` = project
