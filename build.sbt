@@ -24,12 +24,13 @@ lazy val buildSettings = Seq(
   )
 )
 
-val akkaV      = "2.4.12"
-val akkaHttpV  = "10.0.0-RC2"
-val circeV     = "0.6.0"
+val akkaV      = "2.4.14"
+val akkaHttpV  = "10.0.0"
+val akkaCors   = "0.1.10"
+val circeV     = "0.6.1"
 val scalaTestV = "3.0.1"
-val akkaCirceV = "1.11.0-M2"
-val logbackV   = "1.1.3"
+val akkaCirceV = "1.11.0"
+val logbackV   = "1.1.7"
 
 
 lazy val `template` = project
@@ -41,11 +42,12 @@ lazy val `template` = project
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-http"         % akkaHttpV,
       "com.typesafe.akka" %% "akka-slf4j"        % akkaV,
+      "de.heikoseeberger" %% "akka-http-circe"   % akkaCirceV,
+      "ch.megard"         %% "akka-http-cors"    % akkaCors,
       "ch.qos.logback"    % "logback-classic"    % logbackV,
       "io.circe"          %% "circe-core"        % circeV,
       "io.circe"          %% "circe-generic"     % circeV,
       "io.circe"          %% "circe-jawn"        % circeV,
-      "de.heikoseeberger" %% "akka-http-circe"   % akkaCirceV,
       "com.typesafe.akka" %% "akka-http-testkit" % akkaHttpV  % "test",
       "org.scalatest"     %% "scalatest"         % scalaTestV % "test"
     )

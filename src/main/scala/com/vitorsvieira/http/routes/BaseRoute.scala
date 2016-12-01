@@ -19,11 +19,13 @@ package com.vitorsvieira.http.routes
 import akka.http.scaladsl.coding.Gzip
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server._
+import ch.megard.akka.http.cors.CorsDirectives._
 
-trait BaseRoute extends CorsSupport {
+trait BaseRoute {
 
+  //For more information regarding the CORS directive, please https://github.com/lomigmegard/akka-http-cors
   def api(dsl: Route, prefix: Boolean, version: String = ""): Route =
-    corsHandler {
+    cors() {
       if (prefix) pathPrefix("api" / version)(encodeResponseWith(Gzip)(dsl))
       else encodeResponseWith(Gzip)(dsl)
     }
