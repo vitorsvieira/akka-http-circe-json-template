@@ -6,9 +6,9 @@ REST API Project Template using Akka HTTP 10.0.0 with Circe 0.6.1 targeting Scal
 
 This project template proudly uses:
  
- * [akka-http-json](https://github.com/circe/circe) version 0.6.1, which is a circe is a JSON library for Scala [circe.github.io](https://circe.github.io/circe/)[github/circe/readme](https://github.com/circe/circe)
- * [akka-http-json](https://github.com/hseeberger/akka-http-json) version 1.11.0, which is a supplementary JSON support for Akka HTTP from [@hseeberger](https://github.com/hseeberger)
- * [akka-http-cors](https://github.com/lomigmegard/akka-http-cors) version 0.1.10, which adds a mechanism to enable cross origin requests for Akka HTTP from [@lomigmegard](https://github.com/lomigmegard)
+ * [akka-http-json](https://github.com/circe/circe) version 0.6.1, is a JSON library for Scala [circe.github.io](https://circe.github.io/circe/)[github/circe/readme](https://github.com/circe/circe)
+ * [akka-http-json](https://github.com/hseeberger/akka-http-json) version 1.11.0, is a supplementary JSON support for Akka HTTP from [@hseeberger](https://github.com/hseeberger)
+ * [akka-http-cors](https://github.com/lomigmegard/akka-http-cors) version 0.1.10, adds a mechanism to enable cross origin requests for Akka HTTP from [@lomigmegard](https://github.com/lomigmegard)
 
 
 ## License ##
