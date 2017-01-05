@@ -57,7 +57,7 @@ $ curl -X POST -H 'Content-Type: application/json' http://localhost:8000/api/v2/
      }'
 ```
 
-With the logging enable routes you will be able to see something like:
+You will be able to see in the console the requests reaching the `/v2/` as below:
 
 ```
 Thread:[akka-http-circe-json-akka.actor.default-dispatcher-16] DEBUG akka.actor.ActorSystemImpl - log-service: Response for
