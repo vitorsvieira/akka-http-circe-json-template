@@ -1,8 +1,9 @@
 ##akka-http-circe-json-template
 
 [![Build Status](https://travis-ci.org/vitorsvieira/akka-http-circe-json-template.svg?branch=master)](https://travis-ci.org/vitorsvieira/akka-http-circe-json-template)
+[![Software License](https://img.shields.io/badge/license-Apache 2-brightgreen.svg?style=flat)](LICENSE)
 
-REST API Project Template using Akka HTTP 10.0.0 with Circe 0.6.1 targeting Scala 2.12.
+REST API Project Template using Akka HTTP 10.0.1 with Circe 0.6.1 targeting Scala 2.12.x.
 
 This project template proudly uses:
  
@@ -10,6 +11,60 @@ This project template proudly uses:
  * [akka-http-json](https://github.com/hseeberger/akka-http-json) version 1.11.0, is a supplementary JSON support for Akka HTTP from [@hseeberger](https://github.com/hseeberger)
  * [akka-http-cors](https://github.com/lomigmegard/akka-http-cors) version 0.1.10, adds a mechanism to enable cross origin requests for Akka HTTP from [@lomigmegard](https://github.com/lomigmegard)
 
+
+## Usage
+
+Start services with sbt:
+
+```
+$ sbt
+> run
+```
+
+You can send requests to the following paths:
+
+```
+$ curl http://localhost:8000/api/v1/service1/status
+$ curl http://localhost:8000/api/v1/service1/models
+$ curl http://localhost:8000/api/v1/service1/modelsByName
+$ curl -X POST -H 'Content-Type: application/json' http://localhost:8000/api/v2/service1/model -d 
+    '{
+        "vString": "akka-http-circe",
+        "vInt":42, 
+        "vLong":100000000,
+        "vFloat":2.4,
+        "vDouble":4.2,
+        "vSeqInt":[1,2,3],
+        "vListInt":[4,5,6]
+     }'
+```
+
+The routes with logging enabled are under the `/v2/` path as below:
+
+```
+$ curl http://localhost:8000/api/v2/service1/status
+$ curl http://localhost:8000/api/v2/service1/models
+$ curl http://localhost:8000/api/v2/service1/modelsByName
+$ curl -X POST -H 'Content-Type: application/json' http://localhost:8000/api/v2/service1/model -d 
+    '{
+        "vString": "akka-http-circe",
+        "vInt":42, 
+        "vLong":100000000,
+        "vFloat":2.4,
+        "vDouble":4.2,
+        "vSeqInt":[1,2,3],
+        "vListInt":[4,5,6]
+     }'
+```
+
+With the logging enable routes you will be able to see something like:
+
+```
+Thread:[akka-http-circe-json-akka.actor.default-dispatcher-16] DEBUG akka.actor.ActorSystemImpl - log-service: Response for
+Request : HttpRequest(HttpMethod(POST),http://localhost:8000/api/v2/service1/model,List(Host: localhost:8000, User-Agent: curl/7.51.0, Accept: */*, Timeout-Access: <function1>),
+HttpEntity.Strict(application/json,{"vString": "akka-http-circe", "vInt":42, "vLong":100000000, "vFloat":2.4,"vDouble":4.2,"vSeqInt":[1,2,3],"vListInt":[4,5,6]}),HttpProtocol(HTTP/1.1))
+Response: Complete(HttpResponse(200 OK,List(),HttpEntity.Strict(application/json,{"message":"model.vString: akka-http-circe - model.vListInt: List(4, 5, 6)"}),HttpProtocol(HTTP/1.1)))
+```
 
 ## License ##
 
