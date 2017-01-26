@@ -17,10 +17,11 @@
 package com.vitorsvieira.http.model
 
 final case class ModelTemplate(
-                                vString:  String,
-                                vInt:     Int,
-                                vLong:    Long,
-                                vFloat:   Float,
-                                vDouble:  Double,
-                                vSeqInt:  Seq[Int],
-                                vListInt: List[Int])
+  vString: String,
+  vInt: Int,
+  vLong: Long,
+  vFloat: Float,
+  vDouble: Double,
+  vSeqInt: Seq[Int],
+  vListInt: List[Int]
+)

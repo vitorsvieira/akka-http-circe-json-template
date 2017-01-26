@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/vitorsvieira/akka-http-circe-json-template.svg?branch=master)](https://travis-ci.org/vitorsvieira/akka-http-circe-json-template)
 [![Software License](https://img.shields.io/badge/license-Apache 2-brightgreen.svg?style=flat)](LICENSE)
 
-REST API Project Template using Akka HTTP 10.0.1 with Circe 0.7.0 targeting Scala 2.12.x.
+REST API Project Template using Akka HTTP 10.0.2 with Circe 0.7.0 targeting Scala 2.12.x.
 
 This project template proudly uses:
  

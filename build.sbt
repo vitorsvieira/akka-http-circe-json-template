@@ -13,7 +13,7 @@ headers      := Map(
 
 lazy val buildSettings = Seq(
   version       := "0.0.1",
-  scalaVersion  := "2.12.0",
+  scalaVersion  := "2.12.1",
   organization := "com.vitorsvieira",
   scalacOptions ++= Seq("-unchecked", "-deprecation", "-encoding", "utf8", "-feature", "-language:higherKinds", "-language:implicitConversions", "-Ydelambdafy:method", "-target:jvm-1.8"),
   resolvers     ++= Seq(
@@ -25,12 +25,12 @@ lazy val buildSettings = Seq(
 )
 
 val akkaV      = "2.4.16"
-val akkaHttpV  = "10.0.1"
+val akkaHttpV  = "10.0.2"
 val akkaCors   = "0.1.10"
 val circeV     = "0.7.0"
 val akkaCirceV = "1.11.0"
 val scalaTestV = "3.0.1"
-val logbackV   = "1.1.8"
+val logbackV   = "1.1.9"
 
 
 lazy val `template` = project
