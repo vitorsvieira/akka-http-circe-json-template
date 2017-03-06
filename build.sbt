@@ -24,13 +24,13 @@ lazy val buildSettings = Seq(
   )
 )
 
-val akkaV      = "2.4.16"
-val akkaHttpV  = "10.0.2"
-val akkaCors   = "0.1.10"
+val akkaV      = "2.4.17"
+val akkaHttpV  = "10.0.4"
+val akkaCors   = "0.1.11"
 val circeV     = "0.7.0"
-val akkaCirceV = "1.11.0"
+val akkaCirceV = "1.12.0"
 val scalaTestV = "3.0.1"
-val logbackV   = "1.1.9"
+val logbackV   = "1.2.1"
 
 
 lazy val `template` = project
